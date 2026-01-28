@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: resilience-store
+spec:
+  ports:
+  - port: 8080
+    targetPort: 5000
+    name: http
+  selector:
+    app: resilience-store

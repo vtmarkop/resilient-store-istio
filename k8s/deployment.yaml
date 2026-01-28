@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resilience-store
+  labels:
+    app: resilience-store
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resilience-store
+  template:
+    metadata:
+      labels:
+        app: resilience-store
+    spec:
+      containers:
+      - name: app
+        image: resilience-store:v1
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+      - name: redis
+        image: redis:alpine

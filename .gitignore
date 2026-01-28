@@ -1,0 +1,51 @@
+# --- Python ---
+# Compiled bytecode (generated automatically)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments (where you installed pip packages)
+venv/
+.venv/
+env/
+.env/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# --- Docker ---
+# We keep Dockerfile, but ignore local builds or large exports
+*.tar
+*.tar.gz
+
+# --- Secrets & Environment Variables (CRITICAL) ---
+# Never commit secrets, keys, or local env settings
+.env
+.env.local
+*.pem
+*.key
+*.crt
+kubeconfig
+
+# --- IDEs & Editors ---
+# VS Code settings (unless you want to share team settings)
+.vscode/
+# IntelliJ / PyCharm
+.idea/
+# Vim swap files
+*.swp
+
+# --- OS Junk Files ---
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# --- Project Specific ---
+# Ignore temporary test logs or scripts you wrote for debugging
+test_loop.sh
+curl_output.txt

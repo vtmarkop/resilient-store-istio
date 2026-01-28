@@ -1,0 +1,13 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: slow-store-only
+spec:
+  action: delay
+  mode: all
+  selector:
+    labelSelectors:
+      app: resilience-store
+  delay:
+    latency: "2000ms"
+  duration: "10m"
